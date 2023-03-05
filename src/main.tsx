@@ -1,9 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { App } from './App';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "./context/";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+import { App } from "./App";
+import { GlobalStyles } from "./styles/global";
+import { darkTheme } from "./themes/dark";
+import { lightTheme } from "./themes/light";
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ThemeProvider>
+        <GlobalStyles />
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
