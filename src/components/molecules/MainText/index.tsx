@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { FlexBox } from "../../../styles/";
+import { SeveralCubes } from "../../atoms/BackgroundDecorations/Cubes";
 import { StyledCube } from "../../atoms/Cube/style";
 import { HeadLine } from "../../atoms/HeadLine";
 import { Title } from "../../atoms/Title";
@@ -24,6 +25,7 @@ export const MainText = () => {
         <HeadLine />
         <Title />
         <DownloadCV />
+        <SeveralCubes />
       </FlexBox>
     </div>
   );

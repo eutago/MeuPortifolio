@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 html,
   body {
+    animation: fadeIn 0.7s both;
     color: ${({ theme }) => theme.font.colors.text};
     background-color: ${({ theme }) => theme.colors.background};
     padding: 0;
@@ -30,5 +31,16 @@ html,
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: ${(props) => props.theme.colors.primary};
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 `;

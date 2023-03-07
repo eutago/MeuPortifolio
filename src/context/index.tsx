@@ -1,11 +1,24 @@
-import React, { createContext, FC, useState } from "react";
+import React, { useState } from "react";
+import { darkTheme } from "../themes/dark";
 import { lightTheme } from "../themes/light";
-import { Theme, ThemeContext } from "./type";
+import { ThemeContext } from "./type";
 
-export const ThemeProvider: FC = ({ children }: any) => {
-  const [theme, setTheme] = useState<Theme>(lightTheme);
+export const ThemeProvider = ({ children }: any) => {
+  const [themeState, setThemeState] = useState(false);
+
+  const toggleTheme = () => {
+    if (themeState) {
+      console.log("dark");
+      return darkTheme;
+    } else {
+      console.log("light");
+      return lightTheme;
+    }
+  };
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={{ themeState, setThemeState, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
   );
 };

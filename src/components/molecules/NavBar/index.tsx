@@ -21,8 +21,11 @@ export const Navbar = () => {
     sr.reveal(".abilities", {
       delay: 700
     });
-    sr.reveal(".contact", {
+    sr.reveal(".projects", {
       delay: 800
+    });
+    sr.reveal(".contact", {
+      delay: 900
     });
   }, []);
 
@@ -32,6 +35,7 @@ export const Navbar = () => {
         <NavItem className='home' text='Iniciar' to='home' />
         <NavItem className='about' text='Quem sou' to='about' />
         <NavItem className='abilities' text='Habilidades' to='abilities' />
+        <NavItem className='projects' text='Projetos' to='projects' />
         <NavItem className='contact' text='Contato' to='contact' />
       </FlexBox>
     </StyledNavbar>

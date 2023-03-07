@@ -1,7 +1,9 @@
 import React, { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { FlexBox } from "../../../styles/";
+import { SixCircles } from "../../atoms/BackgroundDecorations/SixCircles";
 import { BackgroundYellowImage } from "../../atoms/BackgroundYellowImage";
+import { StyledMain } from "./style";
 
 export const MainImage = () => {
   useEffect(() => {
@@ -17,8 +19,11 @@ export const MainImage = () => {
   }, []);
 
   return (
-    <FlexBox justify='flex-end' align='flex-start' direction='row'>
-      <BackgroundYellowImage className='main-img' />
-    </FlexBox>
+    <StyledMain>
+      <FlexBox justify='flex-end' align='flex-start' direction='row'>
+        <BackgroundYellowImage className='main-img' />
+        <SixCircles />
+      </FlexBox>
+    </StyledMain>
   );
 };
